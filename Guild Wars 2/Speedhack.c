@@ -110,7 +110,7 @@ int main()
 
 	char GuildWarsExePath [] = "D:\\Steam\\steamapps\\common\\Guild Wars 2\\Gw2-64.exe";
 
-    uintptr_t PlayerBaseAddr = 0x027A2D00;
+        uintptr_t PlayerBaseAddr = 0x027A2D00;
 
 	HWND hwnd = FindWindow(0, "Guild Wars 2");
 
@@ -131,7 +131,7 @@ int main()
 		return 0;
 	}
 
-    printf("PID: %lu\n", pid);
+        printf("PID: %lu\n", pid);
 
 	HANDLE ProcessHandle = OpenProcess( PROCESS_ALL_ACCESS, false, pid );
 
@@ -186,7 +186,7 @@ int main()
 			else if (GetAsyncKeyState(0x59) == 0xffff8000)   // 0x59 = Y
 			{
 				speed = 9.1875;
-                ChangeSpeed(ProcessHandle, SpeedhackAddr, speed);
+                                ChangeSpeed(ProcessHandle, SpeedhackAddr, speed);
 			}
 
 			printf("Current speed: %f\n", speed);
