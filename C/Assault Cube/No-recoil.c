@@ -3,6 +3,8 @@
 #include <windows.h>
 #include <inttypes.h>
 
+// This works for Assault Cube 1.3.0.2
+
 int main()
 {
 	char AssaultCubeExePath [] = "D:\\Spiele\\AssaultCube 1.3.0.2\\bin_win32\\ac_client.exe";
