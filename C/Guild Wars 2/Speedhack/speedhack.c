@@ -108,11 +108,10 @@ int main()
 	//PrintHotkey();
 
 	// This needs to be compiled as a 64 bit application and run with administration rights. Guild Wars 2 is also a 64 Bit game. It´s free to play and available on Steam. Dont use the speedhack with your main account if you are actually playing the game.
-  // Otherwise you might get banned.
+  	// Otherwise you might get banned.
 
 	char GuildWarsExePath [] = "D:\\Steam\\steamapps\\common\\Guild Wars 2\\Gw2-64.exe";
-
-    uintptr_t PlayerBaseAddr = 0x027A2D00;
+    	uintptr_t PlayerBaseAddr = 0x027A2D00;
 
 	HWND hwnd = FindWindow(0, "Guild Wars 2");
 
@@ -133,10 +132,9 @@ int main()
 		return 0;
 	}
 
-    printf("PID: %lu\n", pid);
-
+    	printf("PID: %lu\n", pid);
 	HANDLE ProcessHandle = OpenProcess( PROCESS_ALL_ACCESS, false, pid );
-
+	
 	if ( ProcessHandle == NULL)
 	{
 		printf("The process could not be found. Error code: %lu\n", GetLastError());
@@ -187,7 +185,7 @@ int main()
 			else if (GetAsyncKeyState(0x59) == 0xffff8000)   // 0x59 = Y
 			{
 				speed = 9.1875;
-        ChangeSpeed(ProcessHandle, SpeedhackAddr, speed);
+        			ChangeSpeed(ProcessHandle, SpeedhackAddr, speed);
 			}
 
 			printf("Current speed: %f\n", speed);
