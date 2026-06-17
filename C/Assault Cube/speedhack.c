@@ -142,7 +142,6 @@ int main()
             {
                 if (keys[i] == VK_O)
                 {
-                    printf("o was pressed\n");
                     GetSpeed(process_handle, &speedhack_data);
                     IncreaseSpeed(process_handle, &speedhack_data);
 
@@ -150,7 +149,6 @@ int main()
 
                 else if (keys[i] == VK_P)
                 {
-                    printf("o was pressed\n");
                     GetSpeed(process_handle, &speedhack_data);
                     DecreaseSpeed(process_handle, &speedhack_data);
                 }
