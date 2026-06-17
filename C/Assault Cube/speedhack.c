@@ -62,7 +62,7 @@ void IncreaseSpeed(HANDLE process_handle, SPEEDHACK_DATA* speedhack_data)
 void DecreaseSpeed(HANDLE process_handle, SPEEDHACK_DATA* speedhack_data)
 {
     int count = sizeof(speedhack_data->speed) / sizeof(unsigned char);
-
+	
     for (int i = 0; i < count; i++)
     {
         if (speedhack_data->speed[i] != 0xff && speedhack_data->speed[i] != 1)
@@ -74,11 +74,9 @@ void DecreaseSpeed(HANDLE process_handle, SPEEDHACK_DATA* speedhack_data)
             else {
                 speedhack_data->speed[i] -= 1;
             }
-
-            printf("::addr: %x | speed: %x\n", speedhack_data->address[i], speedhack_data->speed[i]);
+			
             WriteProcessMemory(process_handle, (void*)(speedhack_data->address[i] + 3), &speedhack_data->speed[i], sizeof(speedhack_data->speed[i]), 0);
         }
-
     }
 }
 
@@ -86,7 +84,6 @@ void DecreaseSpeed(HANDLE process_handle, SPEEDHACK_DATA* speedhack_data)
 
 int main()
 {
-
 	// Speedhack for AssaultCube 1.3.0.2 Lockdown Edition
 	// Download: https://github.com/assaultcube/AC/releases/download/v1.3.0.2/AssaultCube_v1.3.0.2_LockdownEdition.exe
 
@@ -144,7 +141,6 @@ int main()
                 {
                     GetSpeed(process_handle, &speedhack_data);
                     IncreaseSpeed(process_handle, &speedhack_data);
-
                 }
 
                 else if (keys[i] == VK_P)
