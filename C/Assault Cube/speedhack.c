@@ -151,6 +151,7 @@ int main()
             }
 
             key_was_pressed[i] = key_is_down;
+			Sleep(1);
         }
     }
 
