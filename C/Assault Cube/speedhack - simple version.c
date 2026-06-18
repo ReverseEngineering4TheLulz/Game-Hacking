@@ -21,10 +21,10 @@ struct _SPEEDHACK_DATA
 
 int main()
 {
-    SPEEDHACK_DATA.address[0] = 0x004bfd18; // backward , negative speed   "\xc6\x40\x74\xf8";
-    SPEEDHACK_DATA.address[1] = 0x004bfcb8; // forward  , positive speed   "\xc6\x40\x74\x08";
-    SPEEDHACK_DATA.address[2] = 0x004bfc08; // right    , negative speed   "\xc6\x40\x75\xf8";
-    SPEEDHACK_DATA.address[3] = 0x004bfc58; // left     , positive speed   "\xc6\x40\x75\08";
+    SPEEDHACK_DATA.address[0] = 0x004bfd18; // backward  , negative speed   "\xc6\x40\x74\xf8";  | mov byte ptr [eax+74],-08
+    SPEEDHACK_DATA.address[1] = 0x004bfcb8; // forward   , positive speed   "\xc6\x40\x74\x08";  | mov byte ptr [eax+74],08
+    SPEEDHACK_DATA.address[2] = 0x004bfc08; // right     , negative speed   "\xc6\x40\x75\xf8";  | mov byte ptr [eax+75],-08
+    SPEEDHACK_DATA.address[3] = 0x004bfc58; // left      , positive speed   "\xc6\x40\x75\08";   | mov byte ptr [eax+75],08
 
     SPEEDHACK_DATA.speed[0] = "\xf8"; // backward speed
     SPEEDHACK_DATA.speed[1] = "\x08"; // forward speed
