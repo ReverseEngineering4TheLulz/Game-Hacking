@@ -90,7 +90,7 @@ int main()
     SPEEDHACK_DATA speedhack_data;
 
     speedhack_data.address[0] = 0x004bfd18; // forward    , negative speed   "\xc6\x40\x74\xf8";
-    speedhack_data.address[1] = 0x004bfcb8; // backwards , positive speed   "\xc6\x40\x74\x08";
+    speedhack_data.address[1] = 0x004bfcb8; // backward   , positive speed   "\xc6\x40\x74\x08";
     speedhack_data.address[2] = 0x004bfc08; // right      , negative speed   "\xc6\x40\x75\xf8";
     speedhack_data.address[3] = 0x004bfc58; // left       , positive speed   "\xc6\x40\x75\08";
 
